@@ -5,12 +5,24 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "electron:build": "vue-cli-service electron:build",
+    "electron:serve": "vue-cli-service electron:serve",
+    "postinstall": "electron-builder install-app-deps",
+    "postuninstall": "electron-builder install-app-deps"
   },
+  "main": "background.js",
   "dependencies": {
     "core-js": "^2.6.5",
+    "d3": "^5.12.0",
+    "d3.js": "0.0.2-security",
+    "nedb": "^1.8.0",
+    "oncogrid": "^3.0.0",
+    "plotly.js-dist": "^1.50.0",
     "vue": "^2.6.10",
+    "vue-head": "^2.1.2",
     "vue-router": "^3.0.3",
+    "vuetify": "^2.1.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -19,8 +31,14 @@
     "@vue/cli-service": "^3.12.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
+    "electron": "^6.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "sass": "^1.17.4",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-electron-builder": "^1.4.0",
+    "vue-cli-plugin-vuetify": "^1.0.1",
+    "vue-template-compiler": "^2.6.10",
+    "vuetify-loader": "^1.2.2"
   }
 }
